@@ -286,6 +286,7 @@ exportObj.cardLoaders.English = () ->
     exportObj.renameShip """BTA-NR2 Y-Wing""", """BTA-NR2 Y-Wing"""
     exportObj.renameShip """Clone Z-95 Headhunter""", """Clone Z-95 Headhunter"""
     exportObj.renameShip """Rogue-class Starfighter""", """Rogue-class Starfighter"""
+    exportObj.renameShip """YV-865""", """YV-865 Aurore-Class Freighter"""
 
 
     pilot_translations =
@@ -1743,7 +1744,15 @@ exportObj.cardLoaders.English = () ->
         "7th Sky Corps Pilot":
            display_name: """7th Sky Corps Pilot"""
            text: """%LINEBREAK%<strong>Versatile Frame:</strong> You can equip 1 %TORPEDO% or %MISSILE% upgrade. While your revealed maneuver is blue, add white %BOOST% to your action bar."""
-
+        '"Wizard"':
+           text: """While you perform a primary attack, after the Neutralize Results step, you may spend 2 %FORCE% to cancel 1 %HIT% or %CRIT% result. If you do, the defender gains one stress token and you may remove 1 red token."""
+        "Darts D'nar":
+           text: """While you perform an attack, a friendly ship at range 0-1 of the defender in your firing arc may suffer 1 %HIT% damage. If it does, add 1 %HIT% result."""
+        "Mining Guild Foreman":
+           text: """While you are within range 1-2 of an asteroid you have locked, friendly ships may ignore its effects during the Engagement Phase."""
+        "Zygerrian Slaver":
+           text: """<i class = flavor_text>The YV-865 Aurore-class freighter was a highly durable model of freighter built by the Corellian Engineering Corporation. Due to their excessive use by the Zygerrian Slave Empire, they were often nicknamed Zygerrian slave ships.</i>"""
+      
         # Battle of Yavin Pilots
         "Garven Dreis (BoY)":
            display_name: """Garven Dreis (BoY)"""
@@ -2917,7 +2926,12 @@ exportObj.cardLoaders.English = () ->
            text: """<strong>Attack (%LOCK%):</strong> Spend 1 %CHARGE%. After you declare the defender, the defender may choose to suffer 1 %CRIT% damage. If it does, skip the Attack and Defense Dice steps and the attack is treated as hitting."""
         "Xanadu Blood":
            text: """Add %CREW% and %DEVICE% slots."""
-
+        "Black Market Mining Rig":
+           text: """While a friendly ship at range 1-2 defends, you may spend a lock you have on that ship. %LINEBREAK% After you lock a friendly ship or an asteroid, you may perform a red %FOCUS% action. %LINEBREAK% 1 Modified Tie/ln Fighter may dock with you."""
+        "Slaver's Modifications":
+           text: """Gain a %SINGLETURRETARC% with a value of "2". %LINEBREAK% When you declare an attack, if the defender is in your %SINGLETURRETARC% at range 1-2, you may spend a lock you have on the defender. %LINEBREAK% If you do so, the defender gains 1 tractor token. Then, you gain 1 deplete token."""
+        "Tecora":
+           text: """During the End Phase, you may spend 1 %CHARGE% to not remove up to 1 reinforce token. %LINEBREAK% After you suffer damage, recover 1 %CHARGE%. Remove %CREW% slot."""
             
         # Epic upgrades
         "Admiral Ozzel":
