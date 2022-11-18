@@ -1886,6 +1886,27 @@ exportObj.basicCardData = ->
                 [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ]
                 [ 0, 0, 2, 0, 0, 3, 0, 0, 0, 0 ]
             ]
+        "YV-865":
+            name: "YV-865"
+            xws: "YV-865 Aurore-Class Freighter".canonicalize()
+            factions: [ "Scum and Villainy" ]
+            attack: 3
+            agility: 0
+            hull: 10
+            shields: 4
+            large: true
+            actions: [
+                "Focus"
+                "R-Reinforce"
+                "Lock"
+            ]
+            maneuvers: [
+                [ 0, 0, 3, 0, 0, 0 ]
+                [ 0, 1, 1, 1, 0, 0 ]
+                [ 2, 2, 1, 2, 2, 0 ]
+                [ 3, 2, 1, 2, 3, 0 ]
+                [ 0, 0, 2, 0, 0, 0 ]
+            ]
 
         # Epic Section
         "CR90 Corellian Corvette":
@@ -12050,6 +12071,82 @@ exportObj.basicCardData = ->
             skill: 1
             points: 20
         }
+        {
+            name: "Zygerrian Slaver"
+            id: 594
+            faction: "Scum and Villainy"
+            ship: "YV-865"
+            skill: 2
+            points: 48
+            slots: [
+                "Cannon"
+                "Crew"
+                "Gunner"
+                "Illicit"
+                "Modification"
+                "Configuration"
+                "Title"
+            ]
+        }
+        {
+            name: "Mining Guild Foreman"
+            id: 595
+            max_per_squad: 2
+            faction: "Scum and Villainy"
+            ship: "YV-865"
+            skill: 3
+            points: 56
+            slots: [
+                "Talent"
+                "Cannon"
+                "Crew"
+                "Gunner"
+                "Illicit"
+                "Modification"
+                "Configuration"
+                "Title"
+            ]
+        }
+        {
+            name: "Darts D'nar"
+            id: 596
+            unique: true
+            faction: "Scum and Villainy"
+            ship: "YV-865"
+            skill: 4
+            points: 56
+            slots: [
+                "Talent"
+                "Cannon"
+                "Crew"
+                "Gunner"
+                "Illicit"
+                "Modification"
+                "Configuration"
+                "Title"
+            ]
+        }
+        {
+            name: '"Wizard"'
+            id: 597
+            unique: true
+            faction: "Scum and Villainy"
+            ship: "YV-865"
+            skill: 4
+            points: 58
+            force: 2
+            keyword: ["Bounty Hunter"]
+            slots: [
+                "Force"
+                "Cannon"
+                "Crew"
+                "Gunner"
+                "Illicit"
+                "Modification"
+                "Configuration"
+                "Title"
+            ]
+        }
     ]
 
     upgradesById: [
@@ -17027,6 +17124,37 @@ exportObj.basicCardData = ->
                     slot: "Device"
                 }
             ]
+        }
+        {
+            name: "Black Market Mining Rig"
+            id: 473
+            slot: "Configuration"
+            points: 0
+            faction: "Scum and Villainy"
+            ship: "YV-865"
+        }
+        {
+            name: "Slaver's Modifications"
+            id: 474
+            slot: "Configuration"
+            points: 0
+            faction: "Scum and Villainy"
+            ship: "YV-865"
+            attackt: 2
+            range: """1-3"""
+            modifier_func: (stats) ->
+                stats.actions.push 'Rotate Arc' if 'Rotate Arc' not in stats.actions
+        }
+        {
+            name: "Tecora"
+            id: 475
+            slot: "Configuration"
+            points: 2
+            unique: true
+            faction: "Scum and Villainy"
+            ship: "YV-865"
+            charges: 1
+            recurring: 1
         }
     ]
 
